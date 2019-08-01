@@ -1,0 +1,79 @@
+
+<div class="container">
+    <div class="row">
+        <div id="profilehdimg">
+  <p>BLinDo</p>
+          </div>
+    </div>
+  </div>
+  
+  
+  <div class="imghd">
+    <input #file type="file" (change)="detectFiles($event,file.files)"
+     type="file" name="file" class="inputfile"
+     id="file" accept='image/*'  />
+    <label for="file" class="btn"><span>Image</span></label>
+   
+
+  
+    <span style="color:red;" *ngIf="message">{{message}}</span>
+    <img [src]="imgURL" height="200" *ngIf="imgURL">
+  </div>
+  <div class="content">
+
+
+
+
+    
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+      <input formControlName="name" placeholder="Your name">
+      <p #empty_name class="empty">
+  name feild can't be empty      </p>
+      <input formControlName="email" placeholder="Your email">
+      <p #empty_email class="empty">
+         email feild can't be empty      </p>
+      <p *ngIf="!myForm.get('email').valid&&myForm.get('email').touched"
+       class="help-block">
+        please enter a valid email</p>
+      <input type="password"  formControlName="pass" placeholder="Your password">
+      <p #empty_pass class="empty">
+          Password feild can't be empty      </p>
+      <p #length_msg id="passerror">
+        password should have lenght between 6 to 12 characters
+      </p>
+      <input type="password"     formControlName="confirmpass" placeholder="Confirm password">
+      <p #confirm_msg id="confirm_msg">
+        password don't match
+      </p>
+      <button type="submit">Sign up</button>
+      <div id="login"><a >Log in ?</a></div>
+    </form>
+  
+  </div>
+  <!-- ====================================== -->
+
+
+
+
+<!-- 
+<div *ngIf="currentUpload">
+  <div class="progress">
+    <div class="progress-bar progress-bar-animated" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"></div>
+  </div>
+  Progress: {{currentUpload?.name}} | {{currentUpload?.progress}}% Complete
+</div>
+
+    <label>
+       <input type="file" (change)="detectFiles($event)">
+    </label>
+
+    <button class="btn btn-success" [disabled]="!selectedFiles"
+    (click)="upload()">Upload</button>
+
+    <div *ngIf="currentFileUpload" class="progress" style="width:400px">
+      <div class="progress-bar progress-bar-info progress-bar-striped"
+        role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+        aria-valuemin="0" aria-valuemax="100"
+        [ngStyle]="{width:progress.percentage+'%'}">
+        {{progress.percentage}}%</div>
+    </div> -->

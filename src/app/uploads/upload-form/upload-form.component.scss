@@ -1,0 +1,185 @@
+@import'../../../assets/sass/variables';
+
+#profilehdimg{
+   
+ width: auto;
+ margin: 0 auto;
+    color: $primarycolor;
+    font-weight: bold;
+    font-family: right;
+    font-size: 85px;
+text-align: center;
+display: table;
+
+
+
+}
+input.ng-invalid{
+    border: 2px solid red
+}
+.content{
+    width: 36vw;
+    height: 92vh;
+ margin: 0 auto;
+}
+
+
+
+//form
+form{
+    padding: 40px;
+    background-color: #efefef;
+    border-radius: 25px;
+    width: auto;
+    height: auto;
+    input{
+        display: block;
+        width: 100%;
+        padding: 23px;
+        border-radius: 25px;
+        border: none;
+        height: -8px;
+        margin-bottom: 33px;
+        background-color: white;
+        transition: all 0.5s ease;
+
+    &:focus{
+        border:2px solid $primarycolor;
+        outline: none;
+ 
+    }
+}
+    ::placeholder { 
+        color: rgb(149, 149, 149); 
+        font-size: 2rem;
+        font-family: quickreg
+    } 
+   
+    button{
+        margin: 3rem 32% auto;
+        font-family: quickreg;
+        border-radius: 17px;
+        background-color: #171717;
+        color: #efefef;
+        padding: 8px;
+        border: none;
+        transition: background-color .4s ease;
+        width: 134px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        &:hover{
+        background-color: $whitbluecolor;
+        
+        }
+    }
+    p{
+       
+        color: rgb(223, 119, 119)
+    }
+    #confirm_msg,#passerror{
+        display: none;
+    }
+    .empty{
+        display: none;
+    }
+}
+//img upload style
+.imghd{
+
+width: 13vw;
+height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding-top: 100px;
+    img{
+        width: 100%;
+        margin-bottom: 50px;
+        border-radius: 50%;
+    }
+}
+[type="file"] {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  [type="file"] + label {
+    background: #f15d22;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+      font-family: quickreg;
+      font-size: 15px;
+      font-size: inherit;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+   
+  
+    &:hover {
+        background-color: darken(#f15d22, 10%);
+      }
+      &.btn {
+        background-color:  $whitbluecolor;
+        border-radius: 0;
+        overflow: hidden;
+        border-radius: 20px;
+        span {
+          display: inline-block;
+          height: 100%;
+          transition: all 0.3s;
+          width: 100%;
+        }
+        
+        &::before {
+          color: #fff;
+          content: "\f382";
+          font-family: "Font Awesome 5 Free";
+          font-size: 130%;
+          height: 100%;
+          left: 0;
+          line-height: 2.6;
+          position: absolute;
+          top: -180%;
+          transition: all 0.3s;
+          width: 100%;
+        }
+    
+        &:hover {
+          background-color: darken(#ee6d9e, 30%);
+          
+          span {
+            transform: translateY(300%);
+          }
+            
+          &::before {
+            top: 0;
+          }
+        }
+      }
+
+    }  
+    
+    #login {
+        width: 20%;
+margin: 0 auto;
+a{
+    color: #ef1e7a;
+    font-size: 2rem;
+    font-family: quickreg;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+&:hover{
+ color: rgb(199, 171, 171);
+ text-decoration: none;   
+}
+} 
+  
+    }

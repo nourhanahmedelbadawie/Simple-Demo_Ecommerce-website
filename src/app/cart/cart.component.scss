@@ -1,0 +1,60 @@
+@import'../../assets/sass/variables';
+h2{
+    font-family: quickreg;
+    font-weight: bold;
+    font-size: 3rem;
+}
+#logout{
+    display: none
+}
+
+.item{
+    display: flex;
+    width: 44vw;
+        height: 17vw;
+    border: 2px solid rgb(207, 201, 201);
+    background-color: $whitecolor;
+    border-radius: 25px;
+    border: 0 none;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    .img{
+        width: 50%;
+    img{
+        height: 100%;
+        width: 100%;
+        border-bottom: 1px solid $primarycolor;
+        border-radius: 25px;
+    }
+}
+.textimg{
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    font-family: quickreg;
+    p{
+        color: $greycolor;
+font-size: 2rem
+    }
+    p:first-child{
+color: $blackcolor;
+font-size: 2.5rem;
+
+    }
+   .price{
+        color: rgb(120, 216, 103);
+        
+    }
+
+    .del{
+color: rgb(231, 49, 49);
+cursor: pointer;
+&:hover{
+    color:  rgb(179, 82, 82);
+}
+     }
+
+
+}
+
+   
+}

@@ -1,0 +1,64 @@
+<nav>
+  <div class="container">
+    <div class="row links">
+        
+      <div class="logo">
+ 
+        <span style="font-family: right;
+        font-weight:bold;
+        font-size:27px;" style="cursor: pointer" routerLink="/home">BlinDo</span>
+
+
+
+
+
+      </div>
+        <div>
+          <a routerLink="/" class="offset-md-3 col-2" routerLinkActive="active">Home</a>
+          <a (click)="usernavigate()">{{gethd_profile()}}</a>
+
+        </div>
+        <div class="carthd">
+          <span (dblclick)="dropdownmenudis()" (click)="dropdownmenu()"><i class="fas fa-shopping-cart"></i>
+
+          </span>
+          <span id="counthd">{{count}}</span>
+        </div>
+        <div #menu id="dropdownmenu">
+          <ul>
+            <li routerLink="/cart">
+              cart
+            </li>
+            <li routerLink="/profile">
+              submit
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- ========search=========== -->
+        <div class="search">
+
+          <input id="search" [(ngModel)]="searchText" (focusout)="notdisplay()" (focus)="display()"
+            placeholder="search">
+          <ul #list id="list">
+            <li *ngFor="let c of pdtsearch | search : searchText;let i = index">
+              <span>{{c.name}}</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+   
+
+  </nav>
+
+<div class="app_content">
+   
+  <router-outlet></router-outlet>
+
+
+</div>

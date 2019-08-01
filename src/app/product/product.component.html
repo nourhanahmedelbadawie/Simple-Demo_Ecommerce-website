@@ -1,0 +1,41 @@
+
+<section id="cart">
+  <div class="imgcart"> 
+    <div *ngIf="detailedpdt; else placeholder">
+    <img src="{{detailedpdt.src}}">
+    </div>
+<ng-template #placeholder >
+    <i class="home fas fa-exclamation-circle"></i>
+    <p style="color: gray;
+    font-weight:bold;text-align: center;margin-bottom: 33px">No product</p>
+    <div class="nopdt">
+  
+        <div class="btn">
+            <a routerLink="/home" class="button pulse" style="font-weight: bold;">
+              Choose   product
+             </a>
+        </div>
+        
+    </div>
+ 
+</ng-template>
+
+
+
+
+
+
+  </div>
+  <div *ngIf="detailedpdt">
+  <div>
+    <p>Name <span>{{detailedpdt.name}}</span></p>
+    <p>Price <span>{{detailedpdt.price}}</span></p>
+    <p>Category : <span>{{detailedpdt.section}}</span></p>
+    <p style="cursor: pointer" class="icon" (click)="addtocart(detailedpdt)">
+              
+        <i id="carticon" class="fas fa-shopping-cart"></i>
+    </p>
+  
+  </div>
+</div>
+</section>

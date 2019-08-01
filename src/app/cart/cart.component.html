@@ -1,0 +1,35 @@
+<div class="container">
+
+
+        <div class="row">
+
+                <h2>Cart</h2>
+                <section class="content">
+                        <div class="item" *ngFor="let product of myproducts">
+                                <div class="img">
+                                        <img src={{product.src}}>
+                                </div>
+                                <div class="textimg">
+                                        <p>{{product.name}}</p>
+
+                                        
+                                        <p >{{product.section}}</p>
+                                        <p class="price">{{product.price}}</p>
+                                        <p >{{product.cartnum}}</p>
+
+              <p class="del" (click)="delete(product)" >delete</p>
+
+                                     <button (click)="increase(product)">+</button>  
+                                     <button (click)="decrease(product)">-</button>  
+
+
+
+                                </div>
+                        </div>
+                </section>
+
+                <div id="logout">
+                        <button style="border: none;background-color:white" (click)="logout()">Log out</button>
+                </div>
+        </div>
+</div>

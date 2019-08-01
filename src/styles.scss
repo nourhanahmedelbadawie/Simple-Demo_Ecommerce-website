@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  overflow-x: hidden;
+}
+@import '~bootstrap/dist/css/bootstrap.min.css';
+// fonts
+
+
+
+
+  @font-face {
+    font-family: playreg;
+    src: url("assets/fonts/PlayfairDisplay-Regular.ttf");
+  }
+ 
+  @font-face {
+    font-family: quickreg;
+    src: url("assets/fonts/Quicksand-Regular.ttf");
+  }
+  @font-face {
+    font-family: right;
+    src: url("assets/fonts/Righteous-Regular.ttf");
+  }
+
+ 

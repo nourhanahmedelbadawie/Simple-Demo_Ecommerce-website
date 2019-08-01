@@ -1,0 +1,53 @@
+
+
+
+<section class="homehd">
+  <div id="overlay">
+ <div id="btnhd">
+<p>Everything you need to shop online </p>
+  <button class="shop_btn">Shopp now</button>
+  <button class="square_btn">More details</button>
+
+ 
+ </div>
+</div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="pdts_container">
+      <div *ngFor="let product of products"  >
+      
+        <img [routerLink]="['/product',product.id]"
+         (click)="displaypdtservice(product) " src="{{product.src}}">
+        <a href="">{{product.name}}</a>
+       
+        <p class="grey">{{product.price}}</p>
+        <p>{{product.section}}</p>
+        <div class="cart">
+            <a href="">  <i class="fas fa-heart"></i></a>
+            <span (click)="addtocart(product)">
+              
+           <i class="fas fa-shopping-cart" style="cursor: pointer"></i>
+            </span>
+          
+          </div>
+      
+        
+       
+      </div>
+    </div>
+    </div>
+
+   
+
+
+
+
+
+
+  </div>
+
+</section>
+

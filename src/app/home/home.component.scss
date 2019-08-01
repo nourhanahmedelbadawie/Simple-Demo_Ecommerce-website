@@ -1,0 +1,127 @@
+@import'../../assets/sass/variables';
+
+//header
+.homehd{
+    background-image: url(../../assets/home_img/hd.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 27%;
+    height: 305px;
+    margin: 0 auto;
+    margin-bottom: 108px;
+    position: relative
+}
+#overlay{
+   
+    background-color: $ovelayhd;
+    width: 176rem;
+    height: 420px;
+    position: absolute;
+    right: -64rem;
+    top: -30px;
+}
+div#btnhd{
+    margin: 150px auto 0 auto ;
+
+    width: 347px;
+    text-align: center;
+
+    p{
+        font-size: 3rem;
+    
+        font-family: quickreg;
+        margin-bottom: 50px;
+    }
+}
+.shop_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #171717;
+    color: #FFF;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 5px #171717;
+    border: dashed 1px #FFF;
+    font-family: quickreg;
+    font-size: 2rem;
+  
+}
+
+.shop_btn:hover{
+	border: dotted 1px #FFF;
+}
+.square_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+        text-decoration: none;
+    color: $blackcolor;
+    border: solid 1px $blackcolor;
+    border-radius: 3px;
+    transition: .4s;
+    background-color: $ovelayhd;
+    font-size: 2rem;
+    margin-left: 20px;
+}
+
+.square_btn:hover {
+ 
+    background-color: $whitbluecolor;
+}
+
+
+
+// pdts container
+.pdts_container{
+    width: 99rem;
+    height: 800px;
+    font-family: quickreg;
+    color:$blackcolor;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    div{
+        display: inline-block;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        width:31%;
+   
+    }
+    img{
+        width: 100%;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        border: 1px solid $primarycolor;
+        transition:  border-color .4s ease;
+        cursor: pointer;
+        &:hover{
+           border-color:  $blackcolor;
+        }
+    }
+    div.cart {
+        display: inline-block;
+        span,a {
+            color: $greycolor;
+            font-size: 2rem;
+            cursor: pointer;
+            &:hover{
+                color: $whitbluecolor;
+            }
+        }
+        
+    }
+    p,a{
+        padding-left: 10px;
+        font-size: 1.5rem;
+        color: $blackcolor;
+        font-weight: bold
+    }
+    a:hover{
+        color: $whitbluecolor;
+    }
+   p.grey{
+        color:$greycolor;
+        font-size: 1.5rem;
+    }
+}
+
